@@ -1,5 +1,9 @@
 class ArticlesController < ApplicationController
 
+  def index
+    @articles = Article.all
+  end
+
   def new
     @article = Article.new
   end
@@ -30,6 +34,7 @@ class ArticlesController < ApplicationController
     else
       flash[:notice] = "Article was not updated"
       render 'edit'
+    end
   end
 
   private
