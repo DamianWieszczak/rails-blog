@@ -12,9 +12,8 @@
   </head>
 
   <body class="d-flex flex-column">
-    <div id="page-content">
-      <%= render 'layouts/navigation' %>
-      <%= yield %>
-    </div>
+    <%= render 'layouts/navigation' %>
+    <%= render 'shared/messages' %>
+    <%= yield %>
   </body>
 </html>
