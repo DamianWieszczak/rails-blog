@@ -7,16 +7,31 @@
   </ul>
 <% end %>
 
-<%= form_for @article do |f| %>
-  <p>  
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :desription %><br>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <%= form_with(model: @article, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |f| %>
+          <div class="form-group row">
+              <%= f.label :title, class: "col-2 col-form-label text-light" %>
+              <div class="col-10">
+                  <%= f.text_field :title, class: "form-control shadow rounded", placeholder: "Title of article" %>
+              </div>
+          </div>
+
+          <div class="form-group row mt-3">
+              <%= f.label :description, class: "col-2 col-form-label text-light" %>
+              <div class="col-10">
+                  <%= f.text_area :description, rows:15, class: "form-control shadow rounded", placeholder: "Description of article" %>
+              </div>
+          </div>
+          
+              <div class="form-group justify-content-center mt-2 text-center">
+                  <%= f.submit class: "btn btn-outline-warning btn-lg" %>
+              </div>
+      <% end %>
+      <div class="mb-3 text-center">
+          <%= link_to '[ Back to articles ]', articles_path, class: "btn btn-secondary" %>
+      </div>
+    </div>
+  </div>
+</div>

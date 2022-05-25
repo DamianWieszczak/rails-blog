@@ -19,3 +19,21 @@
   color: #fff;
   text-decoration: none;
  }
+ .nav-link
+{
+    color: black !important;
+}
+.nav-link:hover
+{
+  color: #fff;
+  text-decoration: none;
+}
+ #page-content {
+  flex: 1 0 auto;
+}
+#main-header
+{
+    color: #0A1F37;
+    text-shadow: 1px 1px 1px #e2a31c; 
+    margin-bottom: 20px;
+}
