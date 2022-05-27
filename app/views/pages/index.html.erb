@@ -1,3 +1,15 @@
-<h1>Welcome to the first version of the blog!</h1>
+<h1 class="text-center mt-4 mb-4" id="main-header">Welcome to the first version of the blog!</h1>
 
-<%= link_to "About", about_path %>
+<div id="page-content" id="main-header">
+    <div class="container" id="home-container">
+        <div class="bg-light p-5 rounded-lg m-3 text-center" id="containerimage">
+            <h1 class="display-4">Rails Blog</h1>
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum dicta nisi voluptatibus, 
+            repudiandae expedita ullam iure illo odio maxime saepe? Sed voluptatum magnam suscipit libero maxime dolor architecto doloribus saepe.</p>
+            <hr class="my-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi odio blanditiis veniam natus, 
+            voluptatum id autem dolorem alias quis fuga repudiandae, ex nostrum. Totam, veritatis adipisci. Beatae, ipsam nihil.</p>
+            <%= link_to "Sign Up", signup_path, class: "btn btn-warning" %>
+        </div>
+    </div>
+</div>
