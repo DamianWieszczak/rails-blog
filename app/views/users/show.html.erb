@@ -3,6 +3,14 @@
 
 <%= gravatar_for @user, size: 200 %>
 
+<div class="apple_pagination">
+  <%= will_paginate @user_articles, :container => false %>
+</div>
+
 <h3 class="text-center mt-4" id="main-header">List of user articles</h3>
 
 <%= render 'shared/article', object: @user.articles %>
+
+<div class="apple_pagination">
+  <%= will_paginate @user_articles, :container => false %>
+</div>

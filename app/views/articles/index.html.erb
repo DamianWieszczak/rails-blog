@@ -1,3 +1,11 @@
 <h1 class="text-center mt-5" id="main-header">Articles List</h1>
 
+<div class="apple_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
+
 <%= render 'shared/article', object: @articles %>
+
+<div class="apple_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
