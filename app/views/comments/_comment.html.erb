@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-md-center font-italic">
+    <div class="col-6 mt-1">
+      <div class="card text-center ">
+        <div class="card-header">
+          <strong>Commenter: <%= comment.commenter %></strong>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><%= comment.body %></p>
+          <%= link_to "Delete Comment", [comment.article, comment], data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "badge badge-pill badge-danger" %>
+        </div>
+        <div class="text-muted">
+        <small> Created <%= time_ago_in_words(comment.created_at) %> ago</small>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -17,6 +17,9 @@
               <small> Created <%= time_ago_in_words(article.created_at) %> ago,
                       Edited <%= time_ago_in_words(article.updated_at) %> ago</small>
             </div>
+            <div class="card-footer text-muted">
+              <span><%= article.comments.count %> comments</span>
+            </div>
         </div>
       </div>
     </div>

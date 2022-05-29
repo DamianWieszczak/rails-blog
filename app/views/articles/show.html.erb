@@ -15,9 +15,17 @@
           <%= link_to "Back", articles_path, class: "btn btn-sm btn-info" %>
         </div>
         <div class="card-footer text-muted">
-          2 days ago
+          <small> Created <%= time_ago_in_words(@article.created_at) %> ago,
+                  Edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
         </div>
       </div>
   </div>
 </div>
+
+<h2 class="text-center mt-5" id="main-header">Comments</h2>
+<h5 class="card-title"><%= render @article.comments %></h5>
+
+
+<h2 class="text-center mt-5" id="main-header">Add a comment:</h2>
+<%= render 'comments/form' %>
 
