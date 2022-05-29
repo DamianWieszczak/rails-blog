@@ -19,3 +19,24 @@ global.$ = global.jQuery = jQuery;
 window.$ = window.jQuery = jQuery;
 
 require('bootstrap')
+
+
+$(document).on('turbolinks:load', function() 
+{
+
+  console.log('We got it!')
+})
+
+$(document).on('turbolinks:load', function(){ $.rails.refreshCSRFTokens(); });
+
+submit_message = function() 
+{
+  $('#message_body').on('keydown', function(e)
+  {
+    if (e.keyCode == 13) 
+    {
+      $('button').click();
+      e.target.value = "";
+    };
+  });
+};

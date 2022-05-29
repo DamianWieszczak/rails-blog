@@ -1,0 +1,30 @@
+<h1 class="text-center mt-5" id="main-header">Chatroom</h1>
+
+<div class="container">
+  <div class="row justify-content-md-center font-italic">
+    <div class="col-8 mt-4">
+      <div class="card text-center shadow mb-5 bg-white rounded">
+        <div class="card-body">
+          <div id="message">
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="row justify-content-center">
+        <div class="form-group row mt-3">
+          <%= form_for @message, remote: true do |f| %>
+            <div class="col-10">
+              <%= f.text_field :body, class: "form-control shadow rounded" %>
+            </div>
+        </div>
+      </div>
+    <div class="form-group justify-content-center mt-2 text-center">
+        <%= f.submit class: "btn btn-outline-warning btn-sm" %>
+    </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
