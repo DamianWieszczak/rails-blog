@@ -4,33 +4,36 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <%= link_to "Articles", articles_path, class: "nav-link" %>
         </li>
+        <i class="bi bi-book"></i>
         <li class="nav-item">
           <%= link_to "Create Article", new_article_path, class: "nav-link" %>
         </li>
+        <i class="bi bi-pen"></i>
         <li class="nav-item">
           <%= link_to "About", about_path, class: "nav-link" %>
         </li>
+        <i class="bi bi-info-square"></i>
         <% if logged_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <%= link_to "View your Profile", user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <%= link_to "Delete profile", user_path(current_user), class: "dropdown-item text-danger", data: { turbo_confirm: "Are you sure?" }, method: :delete %>
           </div>
         </li>
         <li class="nav-item">
           <%= link_to "Log out", logout_path, class: "nav-link", method: :delete %>
         </li>
+        <i class="bi bi-toggle-off"></i>
         <% else %>
         <li class="nav-item">
           <%= link_to "Log in", login_path, class: "nav-link" %>
