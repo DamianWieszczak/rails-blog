@@ -41,6 +41,11 @@
 {
     margin-top: 30px;
 }
+#sticky-footer
+{
+    flex-shrink: 0;
+    color: yellow;
+}
 /* pagination styling */
 .apple_pagination {
   text-align: center;
